@@ -52,6 +52,35 @@ class Tableoer extends JTable
 	 * @var Varchar
 	 */	
 	var $filedata=null;
+	/**
+	 * @var Varchar
+	 */	
+	var $programtag=null;
+	/**
+	 * @var Varchar
+	 */	
+	var $projecttag=null;
+	/**
+	 * @var Varchar
+	 */	
+	var $authors=null;
+	/**
+	 * @var Varchar
+	 */	
+	var $licence=null;
+	/**
+	 * @var Boolean
+	 */	
+	var $agree=null;
+	/**
+	 * @var Varchar
+	 */	
+	var $group=null;
+	
+	/**
+	 * @var Varchar
+	 */	
+	var $language=null;
 
 	/**
 	 * Constructor
