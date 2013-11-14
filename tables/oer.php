@@ -81,6 +81,11 @@ class Tableoer extends JTable
 	 * @var Varchar
 	 */	
 	var $language=null;
+	
+	/**
+	 * @var Bool
+	 */	
+	var $publish=null;
 
 	/**
 	 * Constructor
@@ -91,4 +96,25 @@ class Tableoer extends JTable
 	function __construct(& $db) {
 		parent::__construct('#__oer_oers', 'id', $db);
 	}
+	
+	function check() {
+		
+    if($this->title == ''){
+		
+        $this->setError(JText::_('This record requires a title')); 
+    }
+	
+	if($this->authors == ''){
+		
+        $this->setError(JText::_('Please enter your author details'));
+    }
+	
+	if (!$this->getError() ==null )
+	{
+		return false;
+	}
+	
+    return true;
+	}
+	
 }
